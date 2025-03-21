@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stroke Test</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='test.css')}}" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <h2 id="head">
+        <span>Beat</span> heart disease. <span>Beat</span> stroke.
+        <span>Beat</span> as one.
+      </h2>
+
+      <div class="container">
+        <div class="stroke-test-card">
+          <!-- <h2>Stroke Risk Test</h2> -->
+          <form action="{{ url_for('predict') }}" method="post">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="gender">select</label>
+                <select id="gender" name="gender" required>
+                  <option value="">Gender</option>
+                  <option value="1">Male</option>
+                  <option value="0">Female</option>
+                  <option value="2">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="age">Age</label>
+                <input
+                  type="number"
+                  id="age"
+                  name="age"
+                  placeholder="Enter age"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="hypertension">Hypertension</label>
+                <select id="hypertension" name="hypertension" required>
+                  <option value="">Select</option>
+                  <option value="0">No</option>
+                  <option value="1">Yes</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="heart-disease">Heart Disease</label>
+                <select id="heart-disease" name="heart_disease" required>
+                  <option value="">Select</option>
+                  <option value="0">No</option>
+                  <option value="1">Yes</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="marital-status">Ever Married</label>
+                <select id="marital-status" name="ever_married" required>
+                  <option value="">Select</option>
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="work-type">Work Type</label>
+                <select id="work-type" name="work_type" required>
+                  <option value="">Select</option>
+                  <option value="2">Private</option>
+                  <option value="3">Self-employed</option>
+                  <option value="0">Govt job</option>
+                  <option value="4">Children</option>
+                  <option value="1">Never</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="residence-type">Residence Type</label>
+                <select id="residence-type" name="Residence_type" required>
+                  <option value="">Select</option>
+                  <option value="1">Urban</option>
+                  <option value="0">Rural</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="avg-glucose-level">Average Glucose Level</label>
+                <input
+                  type="number"
+                  id="avg-glucose-level"
+                  name="avg_glucose_level"
+                  placeholder="Enter glucose level"
+                  required
+                  step="0.01"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="bmi">BMI </label>
+                <input
+                  type="number"
+                  id="bmi"
+                  name="bmi"
+                  placeholder="Enter BMI"
+                  required
+                  step="0.1"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="smoking-status">Smoking Status</label>
+                <select id="smoking-status" name="smoking_status" required>
+                  <option value="">Select</option>
+                  <option value="2">Never</option>
+                  <option value="1">Formerly</option>
+                  <option value="0">Unknown</option>
+                  <option value="smokes"></option>
+                </select>
+              </div>
+
+              <!-- <div class="form-group full-width">
+                        <label for="stroke-status">Stroke Status</label>
+                        <select id="stroke-status" required>
+                            <option value="">Select Stroke Status</option>
+                            <option value="0">No Stroke</option>
+                            <option value="1">Stroke</option>
+                        </select>
+                    </div> -->
+            </div>
+
+            <button type="submit" class="btn">Test</button>
+          </form>
+        </div>
+        <div class="img">
+          <img src="../static/heart-attack.avif.png" alt="" width="300px" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Stroke Awareness</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='../static/heart_favicon.png') }}"
+    />
+
+    <link rel="stylesheet" href="{{url_for('static',filename='home.css')}}" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <img src="../static/heart_logo.png" alt="" width="290px" />
+
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+
+          
+          <li class="nav-item">
+            <a href="{{ url_for('test') }}" class="nav-link">Stroke Test</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="hero-section">
+      <div class="hm">
+        <img src="../static/home.png" alt="" width="100%" />
+      </div>
+    </div>
+    <div class="footer">
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+  </body>
+</html>
